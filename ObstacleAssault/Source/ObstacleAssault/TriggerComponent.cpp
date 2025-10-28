@@ -17,7 +17,8 @@ void UTriggerComponent::BeginPlay()
         Mover = MoverActor->FindComponentByClass<UMover>(); //it will look for a "UMover component" within the "MoverActor"
         if (Mover != nullptr) 
         {
-
+            UE_LOG (LogTemp, Display, TEXT("Succesfully found mover component."));
+            Mover->ShouldMove = true; 
         }
 
         else
